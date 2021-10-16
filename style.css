@@ -36,3 +36,51 @@ img{vertical-align: top;}
 
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
+
+
+body {
+    background: linear-gradient(135deg, #e55d87 0%, #5fc3e4 100%);
+}
+
+.slider {
+    width: 1100px;
+    height: 600px;
+    overflow: hidden;
+    border: 10px solid #fff;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    height: 8px;
+    width: 30px;
+    margin: 6px;
+    cursor: pointer;
+    background-color: #ddd;
+    opacity: 0.5;
+    border-radius: 10px;
+    transition: .4s ease;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    transform: scale(1.1);
+}
+
+input[name=r] {
+    position: absolute;
+    visibility: hidden;
+}
