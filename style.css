@@ -54,31 +54,37 @@ body {
     width: 50vw;
     height: 60vh;
     overflow: hidden;
-    border: 10px solid #fff;
 }
 
 .middle {
     margin: 100px auto;
 }
 
-.navigation {
+.navigation {    
+    position: relative;
+    bottom: 35px;
+    left: 65%;
     display: flex;
 }
 
-.bar {
+.label_inner {
     height: 8px;
     width: 30px;
     margin: 6px;
     cursor: pointer;
     background-color: #ddd;
-    opacity: 0.7;
+    opacity: 0.3;
     border-radius: 10px;
     transition: .4s ease;
 }
 
-.bar:hover {
-    opacity: 1;
+.label_inner:hover {
+    opacity: 0.5;
     transform: scale(1.1);
+}
+
+.label_inner:focus {
+    opacity: 1;
 }
 
 input[name=r] {
@@ -93,6 +99,7 @@ input[name=r] {
 
 .slide {
     width: 20%;
+    height: 90%;
     transition: all .5s ease;
 }
 
@@ -115,6 +122,7 @@ input[name=r] {
 }
 
 .nav-text {
+    margin-top: 10px;
     font-size: 25px;
 }
 
@@ -134,18 +142,51 @@ input[name=r] {
     margin-left: -80%;
 }
 
-#t1:checked ~ .t1 {
-    margin-left: 0%;
+@media (max-width:1164px) {
+    .navigation {
+        left: 55%;
+    }
 }
-#t2:checked ~ .t1 {
-    margin-left: -20%;
+@media (max-width:902px) {
+    .navigation {
+        left: 45%;
+    }
 }
-#t3:checked ~ .t1 {
-    margin-left: -40%;
+@media (max-width:740px) {
+    .navigation {
+        left: 15%;
+        bottom: 40px;
+    }
+    .nav-text {
+        margin-top: 20px;
+        text-align: center;
+    }
 }
-#t4:checked ~ .t1 {
-    margin-left: -60%;
+@media (max-width:500px) {
+    .navigation {
+        left: 10%;
+    }
 }
-#t5:checked ~ .t1 {
-    margin-left: -80%;
+@media (max-width:450px) {
+    .navigation {
+        left: 0;
+        margin-top: 7px;
+    }
+    .slides {
+        height: 75%;
+    }
+}
+
+@media (max-width:350px) {
+    .slider {
+        width: 75vw;
+        height: 55vh;
+        overflow: hidden;
+    }
+    .navigation {
+        left: 10%;
+    }
+    .label_inner {
+        width: 20px;
+    }
 }
